@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-
 <head>
-    <title>Home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+		crossorigin="anonymous">
+	</script>
+	
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3
+	/css/bootstrap.min.css" integrity="sha384-
+	MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8E
+	RdknLPMO" crossorigin="anonymous">
+    <title>Booking System - DreamImpact</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/Dream-impact-icon.png" />
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <style>
+    h1.titlename {
+        font-size: 50px;
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(68, 84, 94);
+    }
+	
+    body {
+		margin: 0;
+		padding: 0;
+		background: url(bg.jpg);
+		background-size: cover;
+		font-family: 'Ubuntu', sans-serif;;
+	}
 
+	h2 {
+		margin: 0;
+		padding: 0 0 20px;
+		color: #efed40;
+		text-align: center;
+	}
+	nav {
+		margin-left: 50px;
+		margin-right: 50px;
+		
+	}
+	nav ul {
+		margin-left: 80px;
+		margin-right: 80px;
+		
+	}
+    </style>
+</head>
 <body>
-hi hi hi
+<nav class="sticky-top navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"><img src="http://www.dreamimpacthk.com/wp-content/uploads/2017/09/Dream-Impact-icon.png" alt="Logo" style="height: 80px;"></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#" onClick="$('.navbar-toggler').trigger('click');return false;">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about" onClick="$('.navbar-toggler').trigger('click');">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#courses" onClick="$('.navbar-toggler').trigger('click');">Courses</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#links" onClick="$('.navbar-toggler').trigger('click');">Links</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#sentence" onClick="$('.navbar-toggler').trigger('click');">Sentences</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#rwd" onClick="$('.navbar-toggler').trigger('click');">RWD</a>
+			</li>
+			<li class="nav-item">
+				<a id='special_btn' class="nav-link" href="#" onClick="$('.navbar-toggler').trigger('click');return false;">Special!</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
+
+</section>
+
+
 </body>
