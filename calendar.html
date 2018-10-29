@@ -15,6 +15,13 @@
     <title>Booking System - DreamImpact</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/Dream-impact-icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<link href="dist/equinox.css" rel="stylesheet">
+<script src="dist/equinox.min.js"></script>
     <style>
     h1.titlename {
         font-size: 50px;
@@ -40,6 +47,14 @@
 		margin-left: 80px;
 		margin-right: 80px;
 		
+	}
+	.loginBox {
+		padding: 50px 50px;
+		box-sizing: border-box;
+		background: rgba(0,0,0,.5);
+	}
+	section {
+		padding-top: 50px;
 	}
     </style>
 </head>
@@ -77,7 +92,59 @@
 	</div>
 </nav>
 <section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
+<div class="container">
+	<div class="loginBox">
+		<div class="event-calendar"></div>
+	</div>
+</div>
+	<script>
+	$(function(){
+	const myEvents = [
+      {
+        start: '2018-10-09 17:30',
+        end: '2018-10-10 17:30',
+        title: 'Event 1',
+        url: '#',
+        class: 'custom-class',
+        color: '#000',
+        data: {}
+      },
+      {
+        start: '2018-10-20 17:30',
+        end: '2018-10-21 17:30',
+        title: 'Event 2',
+        url: '#',
+        class: 'custom-class',
+        color: '#000',
+        data: {}
+      },
+      {
+        start: '2018-10-29 17:30',
+        end: '2018-10-29 18:30',
+        title: 'Event 3',
+        url: '#',
+        class: 'custom-class',
+        color: '#000',
+        data: {}
+      }
+	];
+	$('.event-calendar').equinox({
+	  events: myEvents
+	});
 
+	/*$('.event-calendar').equinox({
+	  events: myEvents
+	});
+	$('.event-calendar').equinox({
+	  onEventClick: null,
+	  onPreviousMonthStart: null,
+	  onNextMonthStart: null,
+	  onCurrentMonthStart: null,
+	  onLoadStart: null,
+	  onLoadEnd: null
+	});*/
+	});
+	</script>
 </section>
 
 
