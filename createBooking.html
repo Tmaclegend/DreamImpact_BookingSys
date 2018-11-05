@@ -50,34 +50,34 @@
 		background: rgba(0,0,0,.5);
 		margin-bottom: 50px;
 	}
-	.loginBox p {
+	p {
 		margin: 0;
 		padding: 0;
 		font-weight: bold;
-		color: #fff;
+		color: #000;
 	}
-	.loginBox h4 {
+	h4 {
 		margin-top: 10px;
 		padding: 0;
 		font-weight: bold;
-		color: #fff;
+		color: #000;
 		text-decoration: underline;
 	}
-	.loginBox input[type="text"]{
+	input[type="text"]{
 		border: none;
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #000;
 		background: transparent;
 		outline: none;
 		height: 40px;
-		color: #fff;
+		color: #000;
 		font-size: 16px;
 	}
-	.loginBox textarea{
+	textarea{
 		border: none;
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #000;
 		background: transparent;
 		outline: none;
-		color: #fff;
+		color: #000;
 		font-size: 16px;
 		width: 100%;
 	}
@@ -87,7 +87,7 @@
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: #c6c6c6;
 	}
-	.loginBox input[type="submit"]{
+	input[type="submit"]{
 		border: none;
 		outline: none;
 		height: 40px;
@@ -97,11 +97,11 @@
 		cursor: pointer;
 		border-radius: 20px;
 	}
-	.loginBox input[type="submit"]:hover{
+	input[type="submit"]:hover{
 		background: #f2ab7e;
 		color: #262626;
 	}
-	.loginBox input{
+	input{
 		width: 100%;
 		margin-bottom: 20px;
 	}
@@ -123,7 +123,7 @@
 				<a class="nav-link" href="calendar.html" onClick="$('.navbar-toggler').trigger('click');">Calender</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="createBooking.html" onClick="$('.navbar-toggler').trigger('click');">Create Booking</a>
+				<a class="nav-link" href="chooseRoom.html" onClick="$('.navbar-toggler').trigger('click');">Create Booking</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="viewBooking.html" onClick="$('.navbar-toggler').trigger('click');">View Booking</a>
@@ -143,87 +143,69 @@
 <section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
 
 	<div class="container">
-		<div class="loginBox">
-			<h2>Create a Booking</h2>
-			<h4>RESERVATION DETAILS</h4>
-			<div class="row">
-				<div class="col-6">
-					<p>Start date</p>
-					<script type="text/javascript">
-						$(function () {
-							$('#datetimepicker1').datetimepicker();
-						});
-					</script>
-					<div class="form-group">
-						<div class="input-group date" id="datetimepicker1">
-							<input type="text" class="form-control" />
-							<span class="input-group-addon">
-								<span class="glyphicon glyphicon-calendar"></span>
-							</span>
-						</div>
-					</div>  
-				</div>
-				<div class="col-6">
-					<p>End date</p>
-					<script type="text/javascript">
-						$(function () {
-							$('#datetimepicker2').datetimepicker();
-						});
-					</script>
-					<div class="form-group">
-						<div class="input-group date" id="datetimepicker2">
-							<input type="text" class="form-control" />
-							<span class="input-group-addon">
-								<span class="glyphicon glyphicon-calendar"></span>
-							</span>
-						</div>
-					</div>  
-				</div>
+		<h3>Create a Booking</h3>
+		<div class="row">
+			<div class="col-12">
+				<p>Selected Room: Meeting Room</p><br>
 			</div>
-			<h4>PERSONAL DETAILS</h4>
-			<div class="row">
-				<div class="col-6">
-					<p>First name</p>
-					<input type="text" name="" placeholder="Enter First Name">
-				</div>
-				<div class="col-6">
-					<p>Last name</p>
-					<input type="text" name="" placeholder="Enter Last Name">
-				</div>
+		</div>
+		<h4>RESERVATION DETAILS</h4>
+		<div class="row">
+			<div class="col-6">
+				<p>Start date</p>
+				<script type="text/javascript">
+					$(function () {
+						$('#datetimepicker1').datetimepicker();
+					});
+				</script>
+				<div class="form-group">
+					<div class="input-group date" id="datetimepicker1">
+						<input type="text" class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>  
 			</div>
-			<div class="row">
-				<div class="col-12">
-					<p>Email address</p>
-					<input type="text" name="" placeholder="Enter Email">
-				</div>
-				<div class="col-12">
-					<p>Mobile</p>
-					<input type="text" name="" placeholder="Enter Mobile">
-				</div>
+			<div class="col-6">
+				<p>End date</p>
+				<script type="text/javascript">
+					$(function () {
+						$('#datetimepicker2').datetimepicker();
+					});
+				</script>
+				<div class="form-group">
+					<div class="input-group date" id="datetimepicker2">
+						<input type="text" class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>  
 			</div>
-			<h4>EVENT DETAILS</h4>
-			<div class="row">
-				<div class="col-6">
-					<p>Event Name</p>
-					<input type="text" name="" placeholder="Enter Event Name">
-				</div>
-				<div class="col-6">
-					<p>Event Cost</p>
-					<input type="text" name="" placeholder="Enter Event Cost">
-				</div>
-				<div class="col-12">
-					<p>Event Content</p>
-					<textarea rows=5 type="text" name="" placeholder="Enter Event Content"></textarea>
-				</div>
+		</div>
+		<h4>EVENT DETAILS</h4>
+		<div class="row">
+			<div class="col-6">
+				<p>Event Name</p>
+				<input type="text" name="" placeholder="Enter Event Name">
 			</div>
-			<br>
-			<div class="row">
-				<div class="col-6">
-					<input type="submit" name="" value="Submit">
-				</div>
-				<div class="col-6">
-					<input type="submit" name="" value="Clear">
-				</div>
+			<div class="col-6">
+				<p>Event Cost</p>
+				<input type="text" name="" placeholder="Enter Event Cost">
+			</div>
+			<div class="col-12">
+				<p>Event Content</p>
+				<textarea style="width:100%;" rows=5 type="text" name="" placeholder="Enter Event Content"></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-6">
+				<input type="submit" name="" value="Submit">
+			</div>
+			<div class="col-6">
+				<input type="submit" name="" value="Clear">
 			</div>
 		</div>
 	</div>
