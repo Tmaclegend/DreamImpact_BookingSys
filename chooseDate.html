@@ -93,7 +93,10 @@
 </nav>
 <section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
 <div class="container">
-	<div class="loginBox">
+	<div class="row">
+		<h3>Choose a date</h3>
+	</div>
+	<div class="row">
 		<div class="event-calendar"></div>
 	</div>
 </div>
@@ -101,8 +104,8 @@
 	$(function(){
 	const myEvents = [
       {
-        start: '2018-10-09 17:30',
-        end: '2018-10-10 17:30',
+        start: '2018-11-09 17:30',
+        end: '2018-11-10 17:30',
         title: 'Event 1',
         url: '#',
         class: 'custom-class',
@@ -110,8 +113,8 @@
         data: {}
       },
       {
-        start: '2018-10-20 17:30',
-        end: '2018-10-21 17:30',
+        start: '2018-11-20 17:30',
+        end: '2018-11-21 17:30',
         title: 'Event 2',
         url: '#',
         class: 'custom-class',
@@ -128,7 +131,11 @@
         data: {}
       }
 	];
+	function goBooking(){
+		$(location).attr('href','createBooking.html');
+	}
 	$('.event-calendar').equinox({
+	  onDateClick: null,
 	  events: myEvents
 	});
 
