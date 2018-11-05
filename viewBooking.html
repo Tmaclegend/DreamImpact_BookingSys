@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+		crossorigin="anonymous">
+	</script>
+	
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3
+	/css/bootstrap.css" integrity="sha384-
+	MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8E
+	RdknLPMO" crossorigin="anonymous">
+    <title>Booking System - DreamImpact</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/Dream-impact-icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+    <style>
+	
+    body {
+		margin: 0;
+		padding: 0;
+		background: url(bg.jpg);
+		background-size: cover;
+		font-family: 'Ubuntu', sans-serif;;
+	}
+	nav ul {
+		margin-left: 80px;
+		margin-right: 80px;
+		
+	}
+	.loginBox {
+		padding: 50px 50px;
+		box-sizing: border-box;
+		background: rgba(0,0,0,.5);
+		margin-bottom: 50px;
+	}
+	.loginBox p {
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		color: #fff;
+	}
+	.loginBox h4 {
+		margin-top: 10px;
+		padding: 0;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: underline;
+	}
+	.loginBox input[type="text"]{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		color: #fff;
+		font-size: 16px;
+	}
+	.loginBox textarea{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		color: #fff;
+		font-size: 16px;
+		width: 100%;
+	}
+	section {
+		padding-top: 50px;
+	}
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: #c6c6c6;
+	}
+	.loginBox input[type="submit"]{
+		border: none;
+		outline: none;
+		height: 40px;
+		color: #fff;
+		font-size: 16px;
+		background: #f27c33;
+		cursor: pointer;
+		border-radius: 20px;
+	}
+	.loginBox input[type="submit"]:hover{
+		background: #f2ab7e;
+		color: #262626;
+	}
+	.loginBox input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+    </style>
+</head>
+<body>
+<nav class="sticky-top navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="homepage.html"><img src="http://www.dreamimpacthk.com/wp-content/uploads/2017/09/Dream-Impact-icon.png" alt="Logo" style="height: 80px;"></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="homepage.html" onClick="$('.navbar-toggler').trigger('click');">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="chooseRoom.html" onClick="$('.navbar-toggler').trigger('click');">Create Booking</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="viewBooking.html" onClick="$('.navbar-toggler').trigger('click');">View Booking</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="setting.html" onClick="$('.navbar-toggler').trigger('click');">Settings</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="login.html" onClick="$('.navbar-toggler').trigger('click');">Logout</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
+
+	<div class="container">
+		<div class="row">
+			<h3>List My Booking</h3>
+
+		</div>
+		<br>
+		<div class="row">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Event Name</th>
+						<th scope="col">Event Date</th>
+						<th scope="col">Room Type</th>
+						<th scope="col">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class='clickable-row' data-href='bookingDetail.html'>
+						<td>Interview</td>
+						<td>9/11/2018 10.00 - 13.00</td>
+						<td>Meeting Room</td>
+						<td>Padding for payment</td>
+					</tr>
+					<tr>
+						<td>「撕紙」義工培訓工作坊</td>
+						<td>20/11/2018 13.00 - 16.00</td>
+						<td>Common Area</td>
+						<td>Approved</td>
+					</tr>
+				</tbody>
+			</table>
+			<script>
+				$(document).ready(function($) {
+				    $(".clickable-row").click(function() {
+				        window.location = $(this).data("href");
+				    });
+				});
+			</script>
+		</div>
+	</div>
+
+</section>
+
+
+</body>
