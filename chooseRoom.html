@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+		crossorigin="anonymous">
+	</script>
+	
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3
+	/css/bootstrap.css" integrity="sha384-
+	MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8E
+	RdknLPMO" crossorigin="anonymous">
+    <title>Booking System - DreamImpact</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/Dream-impact-icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+    <style>
+    h1.titlename {
+        font-size: 50px;
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(68, 84, 94);
+    }
+	
+    body {
+		margin: 0;
+		padding: 0;
+		background: url(bg.jpg);
+		background-size: cover;
+		font-family: 'Ubuntu', sans-serif;;
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0 0 20px;
+		color: #efed40;
+		text-align: center;
+	}
+	nav ul {
+		margin-left: 80px;
+		margin-right: 80px;
+		
+	}
+	.loginBox {
+		padding: 50px 50px;
+		box-sizing: border-box;
+		background: rgba(0,0,0,.5);
+		margin-bottom: 50px;
+	}
+	.loginBox p {
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		color: #fff;
+	}
+	.loginBox h4 {
+		margin-top: 10px;
+		padding: 0;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: underline;
+	}
+	.loginBox input[type="text"]{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		color: #fff;
+		font-size: 16px;
+	}
+	.loginBox textarea{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		color: #fff;
+		font-size: 16px;
+		width: 100%;
+	}
+	section {
+		padding-top: 50px;
+	}
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: #c6c6c6;
+	}
+	.loginBox input[type="submit"]{
+		border: none;
+		outline: none;
+		height: 40px;
+		color: #fff;
+		font-size: 16px;
+		background: #f27c33;
+		cursor: pointer;
+		border-radius: 20px;
+	}
+	.loginBox input[type="submit"]:hover{
+		background: #f2ab7e;
+		color: #262626;
+	}
+	.loginBox input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+    </style>
+</head>
+<body>
+<nav class="sticky-top navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"><img src="http://www.dreamimpacthk.com/wp-content/uploads/2017/09/Dream-Impact-icon.png" alt="Logo" style="height: 80px;"></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#" onClick="$('.navbar-toggler').trigger('click');return false;">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="calendar.html" onClick="$('.navbar-toggler').trigger('click');">Calender</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="chooseRoom.html" onClick="$('.navbar-toggler').trigger('click');">Create Booking</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="viewBooking.html" onClick="$('.navbar-toggler').trigger('click');">View Booking</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#sentence" onClick="$('.navbar-toggler').trigger('click');">Sentences</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#rwd" onClick="$('.navbar-toggler').trigger('click');">RWD</a>
+			</li>
+			<li class="nav-item">
+				<a id='special_btn' class="nav-link" href="#" onClick="$('.navbar-toggler').trigger('click');return false;">Logout</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<section data-speed="1" class="parallax_section_holder   qode_full_screen_height_parallax qode_vertical_middle_align" style="background-image: url(&quot;http://www.dreamimpacthk.com/wp-content/uploads/2016/05/home-slide-2-1.jpg&quot;); height: 790px; background-position: 50% 0px;">
+
+	<div class="container">
+		<h3>Choose a space</h3>
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td style="width:40%;">
+						<img src="image/meeting-room.jpg" style="max-width:100%;">
+					</td>
+					<td>
+						<p>
+							<h5>Meeting Room</h5>
+							Meeting rooms for discussing your next big idea!	
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%;">
+						<img src="image/co-working-space.jpg" style="max-width:100%;">
+					</td>
+					<td>
+						<p>
+							<h5>Co-Working Space</h5>
+							Fixed desks and hot desks are available for the socially minded entrepreneurs! 	
+						</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			
+	</div>
+
+</section>
+
+
+</body>
