@@ -1,0 +1,48 @@
+<tbody>
+				<tr class='clickable-container' data-href='chooseDate.html'>
+					<td style="width:40%;">
+						<img src="image/meeting-room.jpg" style="max-width:100%;">
+					</td>
+					<td>
+						<p>
+							<h5>Meeting Room</h5>
+							Meeting rooms for discussing your next big idea!	
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%;">
+						<img src="image/co-working-space.jpg" style="max-width:100%;">
+					</td>
+					<td>
+						<p>
+							<h5>Co-Working Space</h5>
+							Fixed desks and hot desks are available for the socially minded entrepreneurs! 	
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:40%;">
+						<img src="image/common-area.jpg" style="max-width:100%;">
+					</td>
+					<td>
+						<p>
+							<h5>Common Area</h5>
+							Size: 200 ft2<br>
+							Capacity: 15 seats<br>
+							Speciality: Free Wi-Fi Access, air conditioning, 1 portable projector with HDMI plug in with visual and audio display<br>
+							Audio System : Portable Microphone system<br>
+							Suitable for : Seminar, Workshop<br>
+							Other Amenities: Water Dispenser<br>
+							Food for thought, where do you go when you are thirsty and hungry? Pantry it is. Stay hungry, stay foolish!<br>
+						</p>
+					</td>
+				</tr>
+			</tbody>
+            <script>
+				$(document).ready(function($) {
+				    $(".clickable-row").click(function() {
+				        window.location = $(this).data("href");
+				    });
+				});
+			</script>
